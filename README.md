@@ -40,11 +40,16 @@ LOG_FILE=/home/deploy/deploy.log
 
 {
   echo "=== Deploy started: $(date) ==="
-  git --work-tree=$WORK_TREE --git-dir=$GIT_DIR checkout -f
+  git --work-tree=$WORK_TREE --git-dir=$GIT_DIR checkout -f main
   cd $WORK_TREE
-  docker compose up -d --build
-  echo "=== Deploy finished: $(date) ==="
-} >> "$LOG_FILE" 2>&1
+
+  if docker compose up -d --build; then
+    echo "[OK] Deploy succeeded: $(date)"
+  else
+    echo "[ERR] Build/deploy FAILED: $(date)"
+    exit 1
+  fi
+} 2>&1 | tee -a "$LOG_FILE"
 ```
 
 LEMBRAR de dar `chmod +x post-receive`
