@@ -38,18 +38,18 @@ WORK_TREE=/app
 GIT_DIR=/var/www/nmspaniol.com.git
 LOG_FILE=/home/deploy/deploy.log
 
-{
-  echo "=== Deploy started: $(date) ==="
-  git --work-tree=$WORK_TREE --git-dir=$GIT_DIR checkout -f main
-  cd $WORK_TREE
+echo "=== Deploy started: $(date) ==="
+git --work-tree=$WORK_TREE --git-dir=$GIT_DIR checkout -f main
+cd $WORK_TREE
 
-  if docker compose up -d --build; then
+if docker compose up -d --build; then
     echo "[OK] Deploy succeeded: $(date)"
-  else
+else
     echo "[ERR] Build/deploy FAILED: $(date)"
-    exit 1
-  fi
-} 2>&1 | tee -a "$LOG_FILE"
+exit 1
+fi
 ```
+
+isso coloca o programa em `/app`. para logs, rodar `cd /app; docker compose logs`
 
 LEMBRAR de dar `chmod +x post-receive`
