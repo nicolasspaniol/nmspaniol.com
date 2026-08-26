@@ -16,4 +16,4 @@ COPY . .
 RUN uv sync
 COPY --from=assets /app/src/nmspaniol_com ./src/nmspaniol_com
 
-CMD ["uv", "run", "src/nmspaniol_com/main.py"]
+CMD ["sh", "-c", "uv run gunicorn --bind 0.0.0.0:8000 nmspaniol_com.app:app"]
