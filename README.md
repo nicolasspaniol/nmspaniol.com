@@ -9,10 +9,42 @@
 
 |What                                   |Command|
 |---                                    |---|
-|-                                      |`docker compose up`|
+|-                                      |`docker compose up --build`|
 
 # Git
 
-`git remote add vps ssh://root@vps/var/nmspaniol.com.git`
+no local:
+```
+git remote add vps ssh://deploy@vps/var/www/nmspaniol.com.git
+```
 
-`git init --bare`
+no remoto:
+```
+WWW_PATH=/var/www/nmspaniol.com.git
+mkdir -p "$WWW_PATH"
+git init --bare --initial-branch=main "$WWW_PATH"
+
+useradd --create-home --groups docker deploy
+chown --recursive deploy:deploy "$WWW_PATH"
+
+sudo mkdir -p /app
+sudo chown deploy:deploy /app
+```
+
+em `/var/www/nmspaniol.com.git/hooks/post-receive`:
+```
+#!/bin/bash
+WORK_TREE=/app
+GIT_DIR=/var/www/nmspaniol.com.git
+LOG_FILE=/home/deploy/deploy.log
+
+{
+  echo "=== Deploy started: $(date) ==="
+  git --work-tree=$WORK_TREE --git-dir=$GIT_DIR checkout -f
+  cd $WORK_TREE
+  docker compose up -d --build
+  echo "=== Deploy finished: $(date) ==="
+} >> "$LOG_FILE" 2>&1
+```
+
+LEMBRAR de dar `chmod +x post-receive`
