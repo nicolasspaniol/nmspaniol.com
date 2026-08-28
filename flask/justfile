@@ -1,5 +1,5 @@
 dev:
-    uvx flask --app src/nmspaniol_com/app.py run --debug
+    uv run python -m flask --app src/nmspaniol_com/app.py run --debug
 
 watch-css:
     pnpm watch:css

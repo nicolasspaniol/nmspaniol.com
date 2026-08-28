@@ -1,28 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="view-transition" content="same-origin">
-	<meta name="htmx-config" content='{"transitions":true}'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <meta name="htmx-config" content='{"transitions":true}'>
 
-	<title>Nícolas Spaniol</title>
+    <title>{% block title %}Nícolas Spaniol{% endblock %}</title>
 
     <!-- avoids favicon requests -->
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgo=">
 
-	<!-- tailwind -->
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
-
-    <!-- htmx 4 -->
-	<script src="https://cdn.jsdelivr.net/npm/htmx.org@4.0.0-beta6" integrity="sha384-6lyVbhrs13b9z7mLOpt/N6R76rtkEBWgCjAXRs/DSWyi2AMnQSs10ijWk+PI8n7W" crossorigin="anonymous"></script>
+    <!-- tailwind -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
 </head>
-<body class="min-h-screen bg-orange-100 text-yellow-950 m-10 font-serif flex-column">
-    <main class="max-w-200 mx-auto">
-        <h1 class="text-3xl">Nícolas Mateus Spaniol</h1>
-        <hr class="mb-3">
-        <p>page under construction!</p>
-    </main>
+<body class="min-h-screen bg-orange-100 text-yellow-950 m-10 font-serif flex flex-column">
+    <main class="max-w-250 w-250 mx-auto">{% block main %}{% endblock %}</main>
 </body>
 </html>
 

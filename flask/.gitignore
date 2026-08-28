@@ -1,4 +1,6 @@
 node_modules/
 .venv/
 **/__pycache__/
-src/nmspaniol_com/static/**/*
+
+# tailwind output
+src/nmspaniol_com/static/css/app.css

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Pictures - Nícolas Spaniol{% endblock %}
+
+{% block main %}
+    <h1 class="text-3xl">Nícolas Mateus Spaniol</h1>
+    <hr class="mb-3">
+    {% for row_height, picture_row in pictures_layout %}
+        <div class="flex gap-1 mb-1 w-full" style="height: {{ row_height }}rem">
+            {% for picture in picture_row %}
+                <a href="{{ url_for('static', filename=picture['path']) }}" class="w-auto h-full" target="_blank">
+                    <img
+                        class="w-auto h-full object-contain"
+                        src="{{ url_for('static', filename=picture['thumb']) }}"
+                        title="{{ picture['title'] }}"
+                    >
+                </a>
+            {% endfor %}
+        </div>
+    {% endfor %}
+    <dialog id="focused-picture"></dialog>
+{% endblock %}
