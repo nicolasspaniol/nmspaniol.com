@@ -14,8 +14,14 @@
     <!-- tailwind -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
 </head>
-<body class="min-h-screen bg-orange-100 text-yellow-950 m-10 font-serif flex flex-column">
-    <main class="max-w-250 w-250 mx-auto">{% block main %}{% endblock %}</main>
+<body class="mx-3 min-h-screen bg-orange-100 text-yellow-950 m-10 font-serif flex flex-col">
+    <main class="mx-auto max-w-full w-250">
+        <header>
+            <a href="/"><h1 class="text-3xl">Nícolas Mateus Spaniol</h1></a>
+            <hr class="mb-3">
+        </header>
+        {% block main %}{% endblock %}
+    </main>
 </body>
 </html>
 

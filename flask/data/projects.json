@@ -1,0 +1,20 @@
+[
+  {
+    "title":       "Slicing through (gamejam entry)",
+    "link":        "https://github.com/nicolasspaniol/bigmode-2026",
+    "description": "Game created with a friend using Lua and Löve2D for the Bigmode Game Jam 2026",
+    "image_link":  "https://img.itch.zone/aW1nLzI1NDc2NDA0LnBuZw==/315x250%23c/jmfkMS.png"
+  },
+  {
+    "title":       "Stamps 'n Papers (gamejam entry)",
+    "link":        "https://github.com/nicolasspaniol/crossing-latitudes-2025",
+    "description": "Game created with three friend using Lua and Löve2D for the Crossing Latitudes 2025 game jam",
+    "image_link":  "https://img.itch.zone/aW1hZ2UvMzYwODQyMC8yMTQ3OTk5Ni5qcGc=/347x500/xM8YFD.jpg"
+  },
+  {
+    "title":       "Invert Dark Favicons (Firefox add-on)",
+    "link":        "https://addons.mozilla.org/en-US/firefox/addon/invert-dark-favicons/",
+    "description": "Firefox add-on that inverts the colors of dark favicons so that they are visible under black backgrounds. Created for personal usage and later published to addons.mozilla.org",
+    "image_link":  "https://addons.mozilla.org/user-media/addon_icons/2952/2952761-128.png"
+  }
+]

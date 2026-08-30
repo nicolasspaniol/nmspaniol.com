@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Projects - Nícolas Spaniol{% endblock %}
+
+{% block main %}
+    {% for project in projects %}
+        <a class="rounded-md p-3 border flex gap-5 mb-3 w-full hover:shadow-md hover:bg-black/3" href="{{project.link}}">
+            <img src="{{project.image_link}}" class="h-20 w-20 object-cover rounded-sm">
+            <div class="flex flex-col gap-2">
+                <h2 class="text-lg font-bold">{{project.title}}</h2>
+                <p class="text-md leading-5">{{project.description}}</p>
+            </div>
+        </a>
+    {% endfor %}
+{% endblock %}
+
