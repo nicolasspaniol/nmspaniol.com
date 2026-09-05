@@ -13,12 +13,12 @@
 
 # Git
 
-no local:
+local:
 ```
 git remote add vps ssh://deploy@vps/var/www/nmspaniol.com.git
 ```
 
-no remoto:
+remote:
 ```
 WWW_PATH=/var/www/nmspaniol.com.git
 mkdir -p "$WWW_PATH"
@@ -31,7 +31,7 @@ sudo mkdir -p /app
 sudo chown deploy:deploy /app
 ```
 
-em `/var/www/nmspaniol.com.git/hooks/post-receive`:
+in `/var/www/nmspaniol.com.git/hooks/post-receive`:
 ```
 #!/bin/bash
 WORK_TREE=/app
@@ -49,7 +49,7 @@ else
 exit 1
 fi
 ```
+then `chmod +x post-receive`
 
-isso coloca o programa em `/app`. para logs, rodar `cd /app; docker compose logs`
+this installs the program at `/app`. see logs with `cd /app; docker compose logs`
 
-LEMBRAR de dar `chmod +x post-receive`
