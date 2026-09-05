@@ -2,7 +2,7 @@
   {
     "path": "pictures/ps_sunrise.png",
     "thumb": "pictures/ps_sunrise.thumb.png",
-    "title": null
+    "title": "Porto Seguro - BA"
   },
   {
     "path": "pictures/ps_sunrise_tree.png",
@@ -12,7 +12,7 @@
   {
     "path": "pictures/ps_wavy_sand.png",
     "thumb": "pictures/ps_wavy_sand.thumb.png",
-    "title": "Porto Seguro - BA"
+    "title": null
   },
   {
     "path": "pictures/gavea_selfie.png",
@@ -60,8 +60,8 @@
     "title": "a bug's life"
   },
   {
-    "path": "pictures/IMG_20230604_174808685.png",
-    "thumb": "pictures/IMG_20230604_174808685.thumb.png",
+    "path": "pictures/IMG_20230604_175004195.png",
+    "thumb": "pictures/IMG_20230604_175004195.thumb.png",
     "title": "Porto Alegre - RS"
   },
   {
@@ -102,6 +102,41 @@
   {
     "path": "pictures/IMG_20231231_180721159.png",
     "thumb": "pictures/IMG_20231231_180721159.thumb.png",
+    "title": null
+  },
+  {
+    "path": "pictures/20240421_090232.png",
+    "thumb": "pictures/20240421_090232.thumb.png",
+    "title": null
+  },
+  {
+    "path": "pictures/20250322_135726.png",
+    "thumb": "pictures/20250322_135726.thumb.png",
+    "title": "gaucho leaf spotted in rio"
+  },
+  {
+    "path": "pictures/20241030_172529.png",
+    "thumb": "pictures/20241030_172529.thumb.png",
+    "title": null
+  },
+  {
+    "path": "pictures/20241217_072323.png",
+    "thumb": "pictures/20241217_072323.thumb.png",
+    "title": "use linux!"
+  },
+  {
+    "path": "pictures/20251218_191052.png",
+    "thumb": "pictures/20251218_191052.thumb.png",
+    "title": null
+  },
+  {
+    "path": "pictures/20250104_134622.png",
+    "thumb": "pictures/20250104_134622.thumb.png",
+    "title": "rio grande do sul has great waterfalls"
+  },
+  {
+    "path": "pictures/20250712_144222.png",
+    "thumb": "pictures/20250712_144222.thumb.png",
     "title": null
   }
 ]

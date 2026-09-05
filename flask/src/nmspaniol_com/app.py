@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageOps
 from pathlib import Path
 from flask import Flask, render_template, request
 from flask_caching import Cache
@@ -50,7 +50,11 @@ def arrange_pictures(pictures: list[Picture]):
             path = STATIC_DIR_PATH / pic.path
 
             # get image dimensions
-            w, h = Image.open(path).size
+            # TODO: add aspect ratio to 'pictures.json'
+            # TODO: move exif transposing to image preprocessing step ('add_pictures.sh')
+            img = Image.open(path)
+            img = ImageOps.exif_transpose(img)
+            w, h = img.size
             desired_width = w / h * DESIRED_PICTURE_HEIGHT
 
             # check wheter it's better to add the picture or to leave it to
@@ -62,6 +66,7 @@ def arrange_pictures(pictures: list[Picture]):
             else:
                 row_width -= 1 # remove the extra +1 for the last picture
                 row_height = 250 / row_width * DESIRED_PICTURE_HEIGHT
+                print(row_width)
                 break
 
         # NOTE: divided by 4 because we use "rem" in the css, and tailwind's "1" equals "0.25rem"

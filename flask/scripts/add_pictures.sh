@@ -40,11 +40,14 @@ for f in "$@"; do
     # generate thumbnail in the same folder
     magick "$DEST/$base.png" -resize 400x400 "$DEST/$base.thumb.png"
 
+    # resize original too
+    magick "$DEST/$base.png" -resize 1920x1920 "$DEST/$base.png"
+
     # build the json entry for this image
     entries+=("$(jq -n \
         --arg path "pictures/$base.png" \
         --arg thumb "pictures/$base.thumb.png" \
-        '{"path": $path, "thumb": $thumb}')")
+        '{"path": $path, "thumb": $thumb, "title": null}')")
 
     echo "[OK] added $base.png (+ thumbnail)"
 done
