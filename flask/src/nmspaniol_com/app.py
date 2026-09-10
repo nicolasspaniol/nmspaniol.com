@@ -12,7 +12,6 @@ cache = Cache(app, config={
     'CACHE_TYPE': 'NullCache' if app.debug else 'SimpleCache'
 })
 
-STATIC_DIR_PATH = Path('./src/nmspaniol_com/static/')
 FOREVER = None
 DESIRED_PICTURE_HEIGHT = 70
 PICTURE_ROW_WIDTH = 250
@@ -31,6 +30,8 @@ class Picture:
     path: str
     thumb: str
     title: str
+    width: int
+    height: int
 
 
 # arranges a collection of pictures with different sizes in a grid, preserving
@@ -47,19 +48,11 @@ def arrange_pictures(pictures: list[Picture]):
 
         while remaining_pictures:
             pic = remaining_pictures[0]
-            path = STATIC_DIR_PATH / pic.path
-
-            # get image dimensions
-            # TODO: add aspect ratio to 'pictures.json'
-            # TODO: move exif transposing to image preprocessing step ('add_pictures.sh')
-            img = Image.open(path)
-            img = ImageOps.exif_transpose(img)
-            w, h = img.size
-            desired_width = w / h * DESIRED_PICTURE_HEIGHT
 
             # check wheter it's better to add the picture or to leave it to
             # the next row. this only adds if the row width with the image
             # is closer to the desired width than the width without it
+            desired_width = pic.width / pic.height * DESIRED_PICTURE_HEIGHT
             if row_width + desired_width / 2 < PICTURE_ROW_WIDTH:
                 row.append(remaining_pictures.popleft())
                 row_width += desired_width + 1

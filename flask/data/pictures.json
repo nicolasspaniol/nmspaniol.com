@@ -2,141 +2,197 @@
   {
     "path": "pictures/ps_sunrise.png",
     "thumb": "pictures/ps_sunrise.thumb.png",
-    "title": "Porto Seguro - BA"
+    "title": "Porto Seguro - BA",
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/ps_sunrise_tree.png",
     "thumb": "pictures/ps_sunrise_tree.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/ps_wavy_sand.png",
     "thumb": "pictures/ps_wavy_sand.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1440,
+    "height": 1920
   },
   {
     "path": "pictures/gavea_selfie.png",
     "thumb": "pictures/gavea_selfie.thumb.png",
-    "title": "pedra da gávea trail in rio"
+    "title": "pedra da gávea trail in rio",
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/sunset_pao.png",
     "thumb": "pictures/sunset_pao.thumb.png",
-    "title": "the best beach to watch the sunset from"
+    "title": "the best beach to watch the sunset from",
+    "width": 1440,
+    "height": 1920
   },
   {
     "path": "pictures/trees_pao.png",
     "thumb": "pictures/trees_pao.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/20241030_174902.png",
     "thumb": "pictures/20241030_174902.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/20250104_150525.png",
     "thumb": "pictures/20250104_150525.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/20250712_161432.png",
     "thumb": "pictures/20250712_161432.thumb.png",
-    "title": "photogenic bird at barra da tijuca, rio"
+    "title": "photogenic bird at barra da tijuca, rio",
+    "width": 1440,
+    "height": 1920
   },
   {
     "path": "pictures/IMG_20211114_153449964_HDR.png",
     "thumb": "pictures/IMG_20211114_153449964_HDR.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/IMG_20211222_055910611.png",
     "thumb": "pictures/IMG_20211222_055910611.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/IMG_20220821_123210797.png",
     "thumb": "pictures/IMG_20220821_123210797.thumb.png",
-    "title": "a bug's life"
+    "title": "a bug's life",
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/IMG_20230604_175004195.png",
     "thumb": "pictures/IMG_20230604_175004195.thumb.png",
-    "title": "Porto Alegre - RS"
+    "title": "Porto Alegre - RS",
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/20240504_084519.png",
     "thumb": "pictures/20240504_084519.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1440,
+    "height": 1920
   },
   {
     "path": "pictures/20240504_102622.png",
     "thumb": "pictures/20240504_102622.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/20250804_070850.png",
     "thumb": "pictures/20250804_070850.thumb.png",
-    "title": "average view from fgv's building in rio"
+    "title": "average view from fgv's building in rio",
+    "width": 1440,
+    "height": 1920
   },
   {
     "path": "pictures/20240216_083902.png",
     "thumb": "pictures/20240216_083902.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/IMG_20200608_144837755_BURST000_COVER_COMP.png",
     "thumb": "pictures/IMG_20200608_144837755_BURST000_COVER_COMP.thumb.png",
-    "title": "I really like coffee"
+    "title": "I really like coffee",
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/IMG_20221223_232638364.png",
     "thumb": "pictures/IMG_20221223_232638364.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/IMG_20230520_153552510.png",
     "thumb": "pictures/IMG_20230520_153552510.thumb.png",
-    "title": "currently way longer than this"
+    "title": "currently way longer than this",
+    "width": 1440,
+    "height": 1920
   },
   {
     "path": "pictures/IMG_20231231_180721159.png",
     "thumb": "pictures/IMG_20231231_180721159.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/20240421_090232.png",
     "thumb": "pictures/20240421_090232.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1440,
+    "height": 1920
   },
   {
     "path": "pictures/20250322_135726.png",
     "thumb": "pictures/20250322_135726.thumb.png",
-    "title": "gaucho leaf spotted in rio"
+    "title": "gaucho leaf spotted in rio",
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/20241030_172529.png",
     "thumb": "pictures/20241030_172529.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1440,
+    "height": 1920
   },
   {
     "path": "pictures/20241217_072323.png",
     "thumb": "pictures/20241217_072323.thumb.png",
-    "title": "use linux!"
+    "title": "use linux!",
+    "width": 1440,
+    "height": 1920
   },
   {
     "path": "pictures/20251218_191052.png",
     "thumb": "pictures/20251218_191052.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1920,
+    "height": 1440
   },
   {
     "path": "pictures/20250104_134622.png",
     "thumb": "pictures/20250104_134622.thumb.png",
-    "title": "rio grande do sul has great waterfalls"
+    "title": "rio grande do sul has great waterfalls",
+    "width": 1440,
+    "height": 1920
   },
   {
     "path": "pictures/20250712_144222.png",
     "thumb": "pictures/20250712_144222.thumb.png",
-    "title": null
+    "title": null,
+    "width": 1440,
+    "height": 1920
   }
 ]

@@ -38,16 +38,23 @@ for f in "$@"; do
     esac
 
     # generate thumbnail in the same folder
-    magick "$DEST/$base.png" -resize 400x400 "$DEST/$base.thumb.png"
+    magick "$DEST/$base.png" -resize 400x400 "$DEST/$base.thumb.png" -auto-orient
 
     # resize original too
-    magick "$DEST/$base.png" -resize 1920x1920 "$DEST/$base.png"
+    magick "$DEST/$base.png" -resize 1920x1920 "$DEST/$base.png" -auto-orient
+
+    # get resolution of the (auto-oriented) image
+    res=$(identify -format "%w %h" "$DEST/$base.png")
+    width=$(echo "$res" | cut -d' ' -f1)
+    height=$(echo "$res" | cut -d' ' -f2)
 
     # build the json entry for this image
     entries+=("$(jq -n \
         --arg path "pictures/$base.png" \
         --arg thumb "pictures/$base.thumb.png" \
-        '{"path": $path, "thumb": $thumb, "title": null}')")
+        --argjson width "$width" \
+        --argjson height "$height" \
+        '{"path": $path, "thumb": $thumb, "title": null, "width": $width, "height": $height}')")
 
     echo "[OK] added $base.png (+ thumbnail)"
 done
