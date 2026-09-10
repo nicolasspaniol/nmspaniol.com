@@ -59,7 +59,6 @@ def arrange_pictures(pictures: list[Picture]):
             else:
                 row_width -= 1 # remove the extra +1 for the last picture
                 row_height = 250 / row_width * DESIRED_PICTURE_HEIGHT
-                print(row_width)
                 break
 
         # NOTE: divided by 4 because we use "rem" in the css, and tailwind's "1" equals "0.25rem"
