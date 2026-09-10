@@ -13,7 +13,7 @@ cache = Cache(app, config={
 })
 
 STATIC_DIR_PATH = Path('./src/nmspaniol_com/static/')
-ONE_HOUR = 3600
+FOREVER = None
 DESIRED_PICTURE_HEIGHT = 70
 PICTURE_ROW_WIDTH = 250
 
@@ -78,7 +78,7 @@ def arrange_pictures(pictures: list[Picture]):
 # ROUTES ------------------------------------------------------
 
 @app.get('/pictures')
-@cache.cached(timeout=ONE_HOUR)
+@cache.cached(timeout=FOREVER)
 def page_pictures():
     with open('data/pictures.json') as f:
         pictures = [Picture(**o) for o in json.load(f)]
@@ -92,7 +92,7 @@ def page_homepage():
 
 
 @app.get('/projects')
-@cache.cached(timeout=ONE_HOUR)
+@cache.cached(timeout=FOREVER)
 def page_projects():
     with open('data/projects.json') as f:
         projects = [Project(**o) for o in json.load(f)]
