@@ -3,3 +3,6 @@ dev:
 
 watch-css:
     pnpm watch:css
+
+add-pictures *PICTURES:
+    ./scripts/add_pictures.sh {{PICTURES}}
