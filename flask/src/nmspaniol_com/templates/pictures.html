@@ -8,6 +8,7 @@
             {% for picture in picture_row %}
                 <a href="{{ url_for('static', filename=picture.path) }}" class="w-auto h-full" target="_blank">
                     <img
+                        loading="lazy"
                         class="w-full md:h-full object-contain md:w-auto"
                         src="{{ url_for('static', filename=picture.thumb) }}"
                         {% if picture.title %} title="{{ picture.title }}" {% endif %}
