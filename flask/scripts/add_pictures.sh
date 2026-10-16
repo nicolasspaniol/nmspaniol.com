@@ -43,6 +43,10 @@ for f in "$@"; do
     # resize original too
     magick "$DEST/$base.png" -resize 1920x1920 "$DEST/$base.png" -auto-orient
 
+    # encode lossless JPEG XL versions for the website
+    cjxl --distance=0 --quiet "$DEST/$base.png" "$DEST/$base.jxl"
+    cjxl --distance=0 --quiet "$DEST/$base.thumb.png" "$DEST/$base.thumb.jxl"
+
     # get resolution of the (auto-oriented) image
     res=$(identify -format "%w %h" "$DEST/$base.png")
     width=$(echo "$res" | cut -d' ' -f1)
@@ -50,13 +54,13 @@ for f in "$@"; do
 
     # build the json entry for this image
     entries+=("$(jq -n \
-        --arg path "pictures/$base.png" \
-        --arg thumb "pictures/$base.thumb.png" \
+        --arg path "pictures/$base.jxl" \
+        --arg thumb "pictures/$base.thumb.jxl" \
         --argjson width "$width" \
         --argjson height "$height" \
         '{"path": $path, "thumb": $thumb, "title": null, "width": $width, "height": $height}')")
 
-    echo "[OK] added $base.png (+ thumbnail)"
+    echo "[OK] added $base.jxl (+ thumbnail)"
 done
 
 # merge all new entries into the existing json (or empty array) in one pass
