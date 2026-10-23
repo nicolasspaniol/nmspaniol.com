@@ -5,6 +5,9 @@ from flask_caching import Cache
 from collections import deque
 from dataclasses import dataclass
 import json
+import mimetypes
+
+mimetypes.add_type('image/jxl', '.jxl')
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
